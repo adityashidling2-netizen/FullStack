@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> College application form </title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            align-items: center;
+            background-color: #eaf4f4;
+
+        }
+        header {
+            background-color: #003049;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            padding: 10px;
+            font-size: 25px;
+            color: white;
+            border: 2px solid black;
+            border-radius: 10px;
+            
+        }
+        button{
+            margin-top: 3px;
+            padding: 8px 15px;
+
+            border: 2px solid black;
+            border-radius: 10px;
+            color: rgb(0, 0, 0);
+            background-color: #0077b6;
+        }
+        nav {
+            margin-top: 3px;
+            background-color: rgb(116, 164, 247);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 2px solid black;
+
+        }
+
+        nav>a {
+            color: black;
+        }
+
+        nav>a:hover {
+            color: rgb(255, 79, 79);
+        }
+
+        nav>a:active {
+            color: blue;
+        }
+
+        nav>a:visited {
+            color: bisque;
+        }
+
+        main {
+            margin-top: 20px;
+            background-color: rgb(169, 236, 247);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        main>h2 {
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+    </style>
+</head>
+
+<body >
+        <header>
+                College Application form 
+        </header>
+        <button onclick="history.go(-1)">&lt; Back</button>
+
+        <nav>
+            <a href="aboutcollege" target="_blank"> About college </a>
+            <a href="collegecontact" target="_blank"> College Contact </a>
+            <a href="collegehistory" target="_blank"> College History </a>
+            <a href="recordofcollege" target="_blank"> Record of college </a>
+        </nav>
+    
+    <main>
+        <h2>
+
+            1. Student Details:-
+        </h2>
+        <form action="post" style="color: rgb(11, 11, 11);">
+            <ul>
+                <li><label for="std"> Student Name :-</label>
+                    <input type="text" name="Sname" id="std" placeholder="Enter student name" pattern="[a-zA-z]"
+                        required><br>
+                </li>
+                <li><label for="father"> Your father name :-</label>
+                    <input type="text" name="fname" id="father" placeholder="Enter your father name"><br>
+                </li>
+                <li><label for="mother"> Enter your Mother name :-</label>
+                    <input type="text" name="mname" id="mother" placeholder="Enter your mother name"><br>
+                </li>
+                <li><label for="phone">Enter Phone number :-</label>
+                    <input type="number" name="pnum" id="phone" pattern="[0-9]{10}"
+                        placeholder="10-digit phone number"><br>
+                </li>
+                <li><label>Date of Birth</label>
+                    <input type="date" name="dob" id="dbirth"><br>
+                </li>
+                <li><label>Gender:</label>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">Female</label>
+                </li>
+            </ul>
+        </form>
+    </main>
+
+    <div>
+        <h2>
+            <center> 2. Other required Details are: </center>
+        </h2>
+        <ol type="1">
+            <li><label for="caste">Cast:</label>
+                <select name="caste" id="caste">
+                    <option>Hindu</option>
+                    <option>Muslim</option>
+                    <option>Sikh</option>
+                    <option>Jain</option>
+                    <option>Christen</option>
+                </select><br>
+            </li>
+            <li><label for="category">Category:</label>
+                <select name="category" id="category">
+                    <option>2A</option>
+                    <option>SC</option>
+                    <option>ST</option>
+                    <option>3A</option>
+                    <option> OBC</option>
+                    <option>2B</option>
+                </select><br>
+            </li>
+            <li><label for="hadd">Enter your Home address :</label><br>
+                <textarea name="add" id="hadd" rows="4" cols="25" placeholder="Enter your address"></textarea>
+            </li>
+            <li>
+                <label for="app">Applying Basis :</label>
+                <select name="basis" id="basis">
+                    <option>SSLC</option>
+                    <option>PUC</option>
+                    <option>ITI</option>
+                </select>
+            </li>
+            <li>
+                <label for="course">Course</label>
+                <select name="course" id="course">
+                    <option value="ncert">NCERT</option>
+                    <option value="cbse">CBSE</option>
+                    <option value="icse">ICSE</option>
+                </select>
+            </li>
+        </ol>
+    </div>
+
+
+    <footer>
+        <h2>
+            <center> 7. Decalaration</center>
+        </h2>
+        <form action="post">
+            <input type="checkbox" name="ask" id="ask">
+            <label for="ask">I Declare that all above information is correct</label><br>
+            <button type="reset" value="reset">Reset</button>
+            <button type="submit" value="submit">Submit</button>
+        </form>
+    </footer>
+</body>
+
+</html>
